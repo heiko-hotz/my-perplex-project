@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Distributions and packaging
+.Python
+build/
+dist/
+venv/
+env/
+*.egg
+*.whl
+.venv/
+
+# C extensions
+*.so
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.coverage
+.tox/
+.nox/
+htmlcov/
+.ipynb_checkpoints/ # Jupyter notebooks
+
+# PyInstaller / cx_Freeze
+# These folders are created by PyInstaller/cx_Freeze and should be ignored
+build/
+dist/
+
+# Editor files/folders (optional - uncomment if you use these)
+# .idea/           # IntelliJ IDEA / PyCharm
+# .vscode/         # VS Code
+# *.sublime-project # Sublime Text
+# *.sublime-workspace
+# .DS_Store        # macOS system files
+# Thumbs.db        # Windows thumbnail cache
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Environment variables
+.env
+.flaskenv
+
+# Local development files (e.g., specific settings, temporary data)
+# Add any other files specific to your local setup that you don't want to commit.
+# For example:
+# my_secret_config.py
+# data/
+
