@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lightweight ADK Research Agent</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #app-container {
+            width: 100%;
+            max-width: 768px;
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background: #2a2a2a;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        h1 {
+            text-align: center;
+            font-weight: 300;
+            border-bottom: 1px solid #333;
+            padding: 1rem;
+            margin: 0;
+        }
+        #chatbox {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: scroll;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .message {
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+        .user-message {
+            background-color: #007aff;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+        .agent-message {
+            background-color: #3a3a3c;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            white-space: pre-wrap; /* Preserve whitespace and newlines */
+        }
+        .agent-activity {
+            font-style: italic;
+            color: #888;
+            font-size: 0.9em;
+            align-self: center;
+            padding: 5px 10px;
+            background: #333;
+            border-radius: 10px;
+        }
+        #query-form {
+            display: flex;
+            padding: 1rem;
+            border-top: 1px solid #333;
+        }
+        #query-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 20px;
+            background: #3a3a3c;
+            color: #eee;
+            margin-right: 10px;
+            outline: none;
+        }
+        #query-input:focus {
+            border-color: #007aff;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007aff;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <h1>ADK Research Agent</h1>
+        <div id="chatbox"></div>
+        <form id="query-form">
+            <input type="text" id="query-input" placeholder="Ask a research question..." autocomplete="off">
+            <button type="submit" id="submit-button">Send</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
