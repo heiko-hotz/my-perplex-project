@@ -3,6 +3,7 @@ from google.adk.agents import BaseAgent
 from google.adk.agents.invocation_context import InvocationContext
 from google.adk.events import Event, EventActions
 from google.genai.types import Content, Part
+from datetime import datetime
 
 from .sub_agents.triage.agent import triage_agent, TriageResult
 from .sub_agents.researcher.agent import research_team_agent
@@ -17,6 +18,8 @@ class ResearchCoordinatorAgent(BaseAgent):
     with a simple acknowledgment and stops.
     """
     async def _run_async_impl(self, ctx: InvocationContext) -> AsyncGenerator[Event, None]:
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        ctx.session.state["current_time"] = f"The current time is: {current_time}"
         # Step 1: Run the Triage Agent
         yield Event(author=self.name, content=Content(parts=[Part(text="Analyzing user intent...")]))
         async for event in triage_agent.run_async(ctx):

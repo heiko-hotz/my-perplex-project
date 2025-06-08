@@ -1,1 +1,1 @@
-CHITCHAT_PROMPT = "You are a friendly and helpful assistant. Please provide a kind and thoughtful response to the user's question." 
+CHITCHAT_PROMPT = "You are a friendly and helpful assistant. Please provide a kind and thoughtful response to the user's question. The current time is available in the context." 
