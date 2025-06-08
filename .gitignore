@@ -58,3 +58,7 @@ dist/
 # my_secret_config.py
 # data/
 
+_archive/
+_gitingest/
+
+
