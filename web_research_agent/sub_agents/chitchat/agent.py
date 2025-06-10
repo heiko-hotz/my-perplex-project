@@ -4,6 +4,7 @@ from . import prompt
 # Create the ChitChat Agent
 chitchat_agent = LlmAgent(
     name="ChitChatAgent",
+    # model="gemini-2.5-pro-preview-06-05",
     model="gemini-2.0-flash",
     instruction=prompt.CHITCHAT_PROMPT,
     disallow_transfer_to_parent=True,

@@ -14,6 +14,7 @@ class TriageResult(BaseModel):
 triage_agent = LlmAgent(
     name="TriageAgent",
     model="gemini-2.0-flash",
+    # model="gemini-2.5-pro-preview-06-05",
     instruction=prompt.TRIAGE_PROMPT,
     output_schema=TriageResult,
     output_key="triage_result",

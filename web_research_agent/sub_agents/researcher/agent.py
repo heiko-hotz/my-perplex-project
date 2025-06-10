@@ -52,6 +52,7 @@ class SetupAgent(BaseAgent):
 
 query_generator_agent = LlmAgent(
     name="QueryGeneratorAgent",
+    # model="gemini-2.5-pro-preview-06-05",
     model="gemini-2.0-flash",
     instruction=prompt.QUERY_GENERATOR_PROMPT,
     output_schema=SearchQueries,
@@ -62,6 +63,7 @@ query_generator_agent = LlmAgent(
 
 researcher_agent = LlmAgent(
     name="ResearcherAgent",
+    # model="gemini-2.5-pro-preview-06-05",
     model="gemini-2.0-flash",
     instruction=prompt.RESEARCHER_PROMPT,
     tools=[google_search],
@@ -103,7 +105,8 @@ class ResearchManagerAgent(BaseAgent):
 
 reflector_agent = LlmAgent(
     name="ReflectorAgent",
-    model="gemini-2.0-flash",
+    model="gemini-2.5-pro-preview-06-05",
+    # model="gemini-2.0-flash",
     instruction=prompt.REFLECTOR_PROMPT,
     output_schema=Reflection,
     output_key="reflection_result",
@@ -113,6 +116,7 @@ reflector_agent = LlmAgent(
 
 summarizer_agent = LlmAgent(
     name="SummarizerAgent",
+    # model="gemini-2.5-pro-preview-06-05",
     model="gemini-2.0-flash",
     instruction=prompt.SUMMARIZER_PROMPT,
     output_key="final_summary",
