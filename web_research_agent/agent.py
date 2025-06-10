@@ -25,7 +25,7 @@ class ResearchCoordinatorAgent(BaseAgent):
             author=self.name, 
             content=Content(parts=[Part(text="Analyzing user intent...")]),
             actions=EventActions(
-                state_delta={"current_time": current_time} # <--- THE FIX
+                state_delta={"current_time": current_time}
             )
         )
         async for event in triage_agent.run_async(ctx):
