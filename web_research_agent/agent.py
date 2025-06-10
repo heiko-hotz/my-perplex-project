@@ -20,7 +20,6 @@ class ResearchCoordinatorAgent(BaseAgent):
     async def _run_async_impl(self, ctx: InvocationContext) -> AsyncGenerator[Event, None]:
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         ctx.session.state["current_time"] = f"The current time is: {current_time}"
-        # Step 1: Run the Triage Agent
         yield Event(
             author=self.name, 
             content=Content(parts=[Part(text="Analyzing user intent...")]),
@@ -28,6 +27,7 @@ class ResearchCoordinatorAgent(BaseAgent):
                 state_delta={"current_time": current_time}
             )
         )
+        # Step 1: Run the Triage Agent
         async for event in triage_agent.run_async(ctx):
             yield event
 
