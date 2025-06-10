@@ -60,5 +60,7 @@ dist/
 
 _archive/
 _gitingest/
+concatenated_files.txt
+concatenate_files.py
 
 
