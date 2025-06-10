@@ -8,6 +8,8 @@ The application is designed to take a user's research query, perform a series of
 
 ## Agent Architecture
 
+![Agent Architecture Diagram](architecture.png)
+
 The application follows a multi-agent architecture, orchestrated by a central coordinator:
 
 -   **`ResearchCoordinatorAgent`**: The main entry point of the application. It uses a `triage_agent` to determine the user's intent.
